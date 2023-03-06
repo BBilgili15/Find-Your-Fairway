@@ -16,14 +16,14 @@ body {
 
 /* Base Header CSS */
 .navbar{
-  background-color: black;
+  background-color: rgb(9, 10, 10);
   color: white;
   align-items: center;
   justify-content: space-between;
-  height: 6rem;
+  height: 4rem;
   display: flex;
-  padding: 0.5rem 4rem 0.5rem 4rem;
   border-bottom: 5px solid white;
+  padding: 0 10rem;
 }
 
 .head-left{
@@ -49,8 +49,8 @@ body {
    list-style-type: none;
    font-size: 20px;
    font-weight: bold;
-   color: rgb(148, 177, 140);
-   padding: 0.5rem; 
+   color: white;
+   padding: 2rem; 
 }
 
 a{
@@ -59,11 +59,28 @@ a{
 
 #head-link:hover{
   cursor: pointer;
-  color: white;
+  color: orange;
   transition: 0.2s;
 }
 
 /* Home Card CSS */
+
+.banner{
+  display: flex;
+  color: white;
+  flex-direction: column;
+  background-image: url(https://images.pexels.com/photos/1608383/pexels-photo-1608383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-size: cover;
+  margin: 0 10rem;
+}
+
+.slogan{
+  margin: 1.75rem auto;
+  font-size: 2.75rem;
+  background-color: black;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+}
 
 .filter-section{
   margin: 0.5rem auto;
@@ -74,8 +91,9 @@ a{
 }
 
 .searchbar{
-  width: 15rem;
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  width: 20rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
   color: black;
   font-weight: bold;
   margin-left: 2rem;
@@ -83,20 +101,22 @@ a{
 }
 
 .par-dropdown{
-  width: 7.5rem;
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  width: 10rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   color: black;
   font-weight: bold;
   margin-left: 2rem;
   border: 2px solid black;
+  border-radius: 1rem;
 }
 
 .filter-button{
-  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   background-color: orange;
   color: black;
   font-weight: bold;
   margin-left: 2rem;
+  border-radius: 1rem;
 }
 
 .filter-button:hover{
@@ -108,18 +128,19 @@ a{
 .courses{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  margin: 0 1rem;
+  margin: 0 10rem;
+  border-top: 5px solid white;
 }
 
 .golf-course__item{
   width: 90%;
+  min-width: 250px;
   list-style-type: none;
   margin-top: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
   background-color: white;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-radius: 15px;
   box-shadow: 3px 4px 5px rgba(0,0,0,0.3);
   text-decoration: none;
   text-decoration: none;
@@ -145,6 +166,8 @@ a{
   height: 200px;
   display: block;
   object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 .golf-course__name{
@@ -165,6 +188,7 @@ a{
   border: 5px solid white;
   background-color: linen;
   box-shadow: 3px 4px 5px rgba(0,0,0,0.3);
+  margin: 2rem 10rem;
 }
 
 .course-details__top-row{
@@ -257,7 +281,7 @@ a{
   width: 15%;
   margin-left: 2rem;
   margin-right: 1rem;
-  background-color: rgb(202, 231, 193);
+  background-color: white;
   text-align: center;
   /* box-shadow: 3px 4px 5px rgba(0,0,0,0.3); */
 }
@@ -350,13 +374,16 @@ a{
   font-weight: bold;
 }
 
-.my-courses__body{
+.my_courses__body{
+  margin: 0 10rem;
   display: flex;
+  flex-direction: column;
 }
 
 .top-section{
   display: flex;
   justify-content: space-between;
+  margin-top: 0.75rem;
 }
 
 #my-courses__section{
@@ -426,8 +453,7 @@ a{
   width: 10%;
   min-width: 150px;
   padding: 0 0.5rem 0 0.5rem;;
-  border-bottom-right-radius: 20%;
-  border-bottom-left-radius: 20%;
+  border-radius: 20%;
   background-color: linen;
   border: 5px solid white;
   box-shadow: 1px 1px 5px;
@@ -438,45 +464,69 @@ a{
 }
 
 .wish-list{
-  background-color: lightblue;
+  border-bottom: 2px solid linen;
+}
+
+.played-list{
+  border-bottom: 2px solid linen;
 }
 
 /* CSS for tiles on my courses */
 .user-list-tiles{
-  background-color: lightcoral;
   display: flex;
   justify-content: center;
   align-items: end;
   margin-left: 2rem;
-}
+} 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Make an alternative version of tiles and edit so they fit */
+/* EDIT THE BELOW */
 
 .user_golf-course__item{
   width: 90%;
-  
+  min-width: 200px;
+  max-height: 225px;
   list-style-type: none;
   margin-top: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
   background-color: white;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-radius: 15px;
   box-shadow: 3px 4px 5px rgba(0,0,0,0.3);
   text-decoration: none;
   text-decoration: none;
   color: black;
 }
 
-
-/* Make an alternative version of tiles and edit so they fit */
-
-/* .golf-course__item:hover{
+.user_golf-course__item:hover{
   background-color: orange;
   color: white;
   transition: 0.25s;
 }
 
-.golf-course__content{
+.user_golf-course__content{
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -484,20 +534,24 @@ a{
   align-items: center;
 }
 
-.golf-course__image{
+.user_golf-course__image{
   width: 100%;
-  height: 200px;
+  height: 100%;
   display: block;
   object-fit: cover;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
-.golf-course__name{
+.user_golf-course__name{
   margin-bottom: 0.25rem;
+  font-size: 0.95rem;
 }
 
-.golf-course__info{
+.user_golf-course__info{
   font-weight: 100;
-} */
+  font-size: 0.8rem;
+}
 
 
 

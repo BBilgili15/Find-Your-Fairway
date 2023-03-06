@@ -29,31 +29,49 @@
     <div id="my-courses__section" class="wish-list">
         <div id="main-tile" class="wish-list__main-tile">
             <h4 id="tile-title">WISH LIST</h4>
-            <a href="{% url 'information_home' %}"><div class="add-to-button"></div></a>
+            <a href="{% url 'information_home' %}">
+                <div class="add-to-button"></div>
+            </a>
         </div>
 
         <div class="user-list-tiles">
         {% for course in courses %}
         <!-- Change this to course in "USER WISHLIST" -->
         <a class="course-link"  href="{% url 'course_details' course.id %}"><div class="user_golf-course__item">
-            <img class="golf-course__image" src="/static/images/royal_dornoch.jpg">
-            <div class="golf-course__content">
-              <h3 class="golf-course__name">{{ course.name }}</h3>
-              <h4 class="golf-course__info">Par: {{ course.par }}  |  Average Rating: {{ course.average_rating }}/5</h4>
+            <img class="user_golf-course__image" src="/static/images/royal_dornoch.jpg">
+            <div class="user_golf-course__content">
+              <h3 class="user_golf-course__name">{{ course.name }}</h3>
+              <h4 class="user_golf-course__info">Par: {{ course.par }}  |  Average Rating: {{ course.average_rating }}/5</h4>
             </div>
           </div></a>
         {% endfor %}
         </div>
 
-        
-    
     </div>
+
     <div id="my-courses__section" class="played-list">
         <div id="main-tile" class="played-list__main-tile">
             <h4 id="tile-title">PLAYED LIST</h4>
-            <a href="{% url 'information_home' %}"><div class="add-to-button"></div></a>
+            <a href="{% url 'information_home' %}">
+                <div class="add-to-button"></div>
+            </a>
         </div>
+    
+        <div class="user-list-tiles">
+            {% for course in courses %}
+            <!-- Change this to course in "USER PLAYED LIST" -->
+            <a class="course-link"  href="{% url 'course_details' course.id %}"><div class="user_golf-course__item">
+                <img class="user_golf-course__image" src="/static/images/royal_dornoch.jpg">
+                <div class="user_golf-course__content">
+                  <h3 class="user_golf-course__name">{{ course.name }}</h3>
+                  <h4 class="user_golf-course__info">Par: {{ course.par }}  |  Average Rating: {{ course.average_rating }}/5</h4>
+                </div>
+              </div></a>
+            {% endfor %}
+            </div>
+    
     </div>
+    
 </section>
 
 {% endblock content %}
