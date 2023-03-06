@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="course-details">
+  <div class="course-details__top-row">
+    <div id="course-details__section" class="course-details__image">
+      <img class="course-image" src="/static/images/royal_dornoch.jpg" alt="course">
+    </div>
+
+
+    <!-- THIS SECTION TO BE CONTINUED - EVERYTHING WILL NEED TO BE DYNAMIC EVENTUALLY -->
+    <div id="course-details__section" class="course-details__information">
+      <h2 class="course-name">{{ course.name }}</h2>
+      <h4 class="course-full-description">"{{ course.description }}"</h4>
+      <section class="course-content">
+        <div class="course-stats">
+          <p id="stat"><span class="bold">Par</span> | {{ course.par }}</p>
+          <p id="stat"><span class="bold">Founded</span> | {{ course.founded }}</p>
+          <p id="stat"><span class="bold">Rating</span> | {{ course.average_rating }}/5</p>
+          <p id="stat" ><span id="bold"><a href="{{ course.website_link }}">Visit Website Here</a></span></p>
+        </div>
+        <div class="buttons">
+          <button id="add-to-button" class="wishlist-button">ADD TO WISHLIST</button>
+          <button id="add-to-button" class="played-button">ADD TO PLAYED COURSES</button>
+          <button id="add-to-button" class="leave-review-button">LEAVE A REVIEW</button>
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <div class="course-details__bottom-row">
+    
+    <div id="course-details__section" class="reviews-section">
+      <div class="title-filter">
+        <h3 class="subheading">All Reviews</h3>
+
+
+        <form method="get"  action="{% url 'course_details' course.id %}"> 
+          <select name="star-rating" class="star-dropdown">
+            <option disabled selected>By Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <a href="#"><button  id="ratings-filter-button">Clear</button></a>
+          <button type="submit" id="ratings-filter-button">Filter</button>
+          </form>
+
+      </div>
+        <div class="reviews-list">
+          {% for review in reviews %}
+          <div class="review-tile">
+            <div class="rating-user">
+              <h4><span class="rating">{{ review.rating }}/5</span> | {{ review.reviewer}}</h4>
+              <h6 class="review-date">{{ review.date }}</h6>
+            </div>
+            <div class="review-content">
+              <p>"{{ review.description }}"</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+      
+
+
+</section>
+  
+  
+</section>
+
+{% endblock content %}
+
+

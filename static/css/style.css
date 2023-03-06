@@ -1,0 +1,547 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+body {
+  /* background-color: rgb(202, 231, 193); */
+  background: linear-gradient(45deg, rgb(202, 231, 193), linen);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+}
+
+
+/* Base Header CSS */
+.navbar{
+  background-color: black;
+  color: white;
+  align-items: center;
+  justify-content: space-between;
+  height: 6rem;
+  display: flex;
+  padding: 0.5rem 4rem 0.5rem 4rem;
+  border-bottom: 5px solid white;
+}
+
+.head-left{
+  width: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.head-image{
+  height: 3.5rem;
+  border-radius: 50%;
+}
+
+.site-links{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20rem;
+}
+
+#head-link{
+   list-style-type: none;
+   font-size: 20px;
+   font-weight: bold;
+   color: rgb(148, 177, 140);
+   padding: 0.5rem; 
+}
+
+a{
+  text-decoration: none;
+}
+
+#head-link:hover{
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+
+/* Home Card CSS */
+
+.filter-section{
+  margin: 0.5rem auto;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  /* background-color: lightpink; */
+}
+
+.searchbar{
+  width: 15rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  color: black;
+  font-weight: bold;
+  margin-left: 2rem;
+  border: 2px solid black;
+}
+
+.par-dropdown{
+  width: 7.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  color: black;
+  font-weight: bold;
+  margin-left: 2rem;
+  border: 2px solid black;
+}
+
+.filter-button{
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  margin-left: 2rem;
+}
+
+.filter-button:hover{
+  cursor: pointer;
+  background-color: orangered;
+  transition: 0.25s;
+}
+
+.courses{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 0 1rem;
+}
+
+.golf-course__item{
+  width: 90%;
+  list-style-type: none;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: white;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 3px 4px 5px rgba(0,0,0,0.3);
+  text-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
+.golf-course__item:hover{
+  background-color: orange;
+  color: white;
+  transition: 0.25s;
+}
+
+.golf-course__content{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.golf-course__image{
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+.golf-course__name{
+  margin-bottom: 0.25rem;
+}
+
+.golf-course__info{
+  font-weight: 100;
+}
+
+
+/* Course Details CSS */
+
+.course-details{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  border: 5px solid white;
+  background-color: linen;
+  box-shadow: 3px 4px 5px rgba(0,0,0,0.3);
+}
+
+.course-details__top-row{
+  display: flex;
+}
+
+.course-details__bottom-row{
+  display: flex;
+}
+
+#course-details__section{
+  width: 100%;
+  height: 20rem;
+}
+
+.course-image{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.course-details__information{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.course-name{
+  color: black;
+  background-color: white;
+  padding: 0.25rem 0.5rem;
+  border: 3px solid black;
+}
+
+.course-full-description{
+  margin: 0 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.course-content{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  height: 7rem;
+}
+
+.course-stats{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  background-color: white;
+  padding: 0 2rem;
+  /* border-radius: 10%; */
+  box-shadow: 3px 4px 5px rgba(0,0,0,0.3);
+}
+
+.website-link{
+  color: orangered;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#add-to-button{
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  margin-left: 2rem;
+  width: 14rem;
+  margin-bottom: 0.3rem;
+}
+
+#add-to-button:hover{
+  cursor: pointer;
+  background-color: orangered;
+  transition: 0.25s;
+}
+
+.subheading{
+  border: 2px solid black;
+  padding: 0.1rem 1rem 0.1rem 1rem;
+  width: 15%;
+  margin-left: 2rem;
+  margin-right: 1rem;
+  background-color: rgb(202, 231, 193);
+  text-align: center;
+  /* box-shadow: 3px 4px 5px rgba(0,0,0,0.3); */
+}
+
+.title-filter{
+  display: flex;
+}
+
+.star-dropdown{
+  width: 7.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+#ratings-filter-button{
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  margin-left: 1rem;
+}
+
+#ratings-filter-button:hover{
+  cursor: pointer;
+  background-color: orange;
+  transition: 0.25s;
+}
+
+
+#bold{
+  font-weight: bold;
+}
+
+
+.course-details__bottom-row{
+  border-top: 5px solid white;
+}
+
+.reviews-section{
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.review-tile{
+  background-color: white;
+  border: 2px solid black;
+  width: 22%;
+  height: 11rem;
+  margin: 2rem 1rem;
+  padding: 1rem;
+  box-shadow: 3px 4px 5px rgba(0,0,0,0.3);
+  border-radius: 10%;
+}
+
+.reviews-list{
+  display: flex;
+  margin-left: 1rem;
+}
+
+.review-date{
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.rating-user{
+  margin-bottom: 1rem;
+  border-bottom: 2px grey solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating{
+  color: orangered;
+}
+
+
+
+
+
+/* My Courses CSS */
+
+.bold{
+  font-weight: bold;
+}
+
+.my-courses__body{
+  display: flex;
+}
+
+.top-section{
+  display: flex;
+  justify-content: space-between;
+}
+
+#my-courses__section{
+  height: 12rem;  
+  margin: 1rem;
+  align-items: center;
+  display: flex;
+}
+
+.user-passport{
+  background-color: linen;
+  width: 35%;
+  min-width: 450px;
+  border: 5px solid white;    
+  box-shadow: 1px 1px 5px;
+  padding: 1rem 4rem 1rem 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-photo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  /* background-color: lightpink; */
+}
+
+.placeholder{
+  height: 8rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 5px solid white; 
+  box-shadow: 0.1px 0.1px 5px;
+}
+
+.placeholder:hover {
+  cursor: pointer;
+  transition: 0.5s;
+  border: 5px solid lightgrey; 
+}
+
+.user-information{
+  /* background-color: lightpink; */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  font-size: 1.15rem;
+}
+
+.social-icons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+#social-icon{
+  height: 2rem;
+  margin-top: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+
+#main-tile{
+  height: 55%;
+  width: 10%;
+  min-width: 150px;
+  padding: 0 0.5rem 0 0.5rem;;
+  border-bottom-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+  background-color: linen;
+  border: 5px solid white;
+  box-shadow: 1px 1px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.wish-list{
+  background-color: lightblue;
+}
+
+/* CSS for tiles on my courses */
+.user-list-tiles{
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-left: 2rem;
+}
+
+
+.user_golf-course__item{
+  width: 90%;
+  
+  list-style-type: none;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: white;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: 3px 4px 5px rgba(0,0,0,0.3);
+  text-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
+
+/* Make an alternative version of tiles and edit so they fit */
+
+/* .golf-course__item:hover{
+  background-color: orange;
+  color: white;
+  transition: 0.25s;
+}
+
+.golf-course__content{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.golf-course__image{
+  width: 100%;
+  height: 200px;
+  display: block;
+  object-fit: cover;
+}
+
+.golf-course__name{
+  margin-bottom: 0.25rem;
+}
+
+.golf-course__info{
+  font-weight: 100;
+} */
+
+
+
+
+#tile-title{
+  margin-top: 0.5rem;
+}
+
+.add-to-button {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: orangered;
+  position: relative;
+}
+
+.add-to-button::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  height: 10px;
+  margin-top: -5px;
+  top: 50%;
+  left: 5px;
+  right: 5px;
+  z-index: 9;
+}
+
+.add-to-button::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  width: 10px;
+  margin-left: -5px;
+  left: 50%;
+  top: 5px;
+  bottom: 5px;
+  z-index: 9;
+}
+
+.add-to-button:hover {
+  cursor: pointer;
+  background-color: rgb(221, 62, 4);
+  transition: 0.25s;
+}
