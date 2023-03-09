@@ -585,3 +585,88 @@ a{
   background-color: rgb(221, 62, 4);
   transition: 0.25s;
 }
+
+
+
+/* Review Page */
+
+.review-page__background{
+  height: 100%;
+  width: 100%;
+  background-image: url(https://images.pexels.com/photos/164250/pexels-photo-164250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-position: center;
+  background-size: cover;
+}
+
+.review-form{
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  margin: 4rem 40rem;
+  height: 35rem;
+  border: 2px solid white;
+  padding: 2rem 0 0 0;
+}
+
+.review-name{
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.review-description{
+  display: flex;
+  flex-direction: column;
+}
+
+#review-description__label{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#review-svg{
+  height: 1rem;
+  margin-left: 0.25rem;
+}
+
+.review-description__input{
+  width: 20rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid white;;
+  margin: 1rem;
+}
+
+.review-score{
+  /* background-color: lightpink; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-submit{
+  /* background-color: lightgray; */
+  display: flex;
+  justify-content: center;
+}
+
+.review-submit-button{
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  margin-top: 2rem;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  width: 10rem;
+  border-radius: 1rem;
+}
+
+.review-submit-button:hover{
+  cursor: pointer;
+  background-color: orangered;
+  transition: 0.25s;
+}

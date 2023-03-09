@@ -18,7 +18,7 @@
 <div class="buttons">
   <button id="add-to-button" class="wishlist-button">ADD TO WISHLIST</button>
   <button id="add-to-button" class="played-button">ADD TO PLAYED COURSES</button>
-  <button id="add-to-button" class="leave-review-button">LEAVE A REVIEW</button>
+  <a href="{% url 'leave_review' course.id %}"><button id="add-to-button" class="leave-review-button">LEAVE A REVIEW</button></a>
 </div>
       
       
@@ -67,12 +67,13 @@
         {% for review in reviews %}
         <div class="review-tile">
           <div class="review-stars">
-            <!-- Need to find a way to make this, "for score out of 5, print star" -->
-            <img src="/static/images/star-light-svgrepo-com.svg" id="star">
-            <img src="/static/images/star-light-svgrepo-com.svg" id="star">
-            <img src="/static/images/star-light-svgrepo-com.svg" id="star">
-            <img src="/static/images/star-light-svgrepo-com.svg" id="star">
-            <img src="/static/images/star-light-svgrepo-com.svg" id="star">
+
+            {% for count in reviews_count %}
+            {% if count < review.rating %}
+            <img src="/static/images/star-light-svgrepo-com.svg" id="star">  
+            {% endif %}
+            {% endfor %}
+            
           </div>
           <div class="rating-user">
             <h4 class="reviewer-name">{{ review.reviewer}}</h4>

@@ -22,12 +22,18 @@ class Course(models.Model):
 class Review(models.Model):
   course = models.ForeignKey(Course, on_delete=models.CASCADE, null=True, blank=True)
   description = models.CharField(max_length=255)
+  
+  # Does Reviewer need to be changed from Charfield to User?
+  # reviewer = models.ForeignKey(User, on_delete=models.CASCADE, related_name="xx")
   reviewer = models.CharField(max_length=255)
+  
   rating = models.IntegerField()
   date = models.DateField(auto_now_add=True)
 
   def __str__(self):
     return f"{self.course.name} | {self.reviewer}"
+
+
 
 
 class UserProfile(models.Model):
