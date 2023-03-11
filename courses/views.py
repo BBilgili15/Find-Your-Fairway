@@ -64,13 +64,13 @@ def add_review(request, id):
         course = get_object_or_404(Course, id=id)
         # Description == what's written in input
         description = request.POST.get("description")
-        # Reviewer == logged in user (but I have no login so need temporary workaround)
-        reviewer = get_object_or_404(User, id=id) 
+        
+        # In future amend to whoever is logged in 
+        reviewer = get_object_or_404(User, id=2) 
         # Rating == rating written 
         rating = request.POST.get("rating")
-        # Date == today (how do I select today) - is below right?
-        date = request.POST(auto_now_add=True)
 
-        review = Review(course=course, description=description, reviewer=reviewer, rating=int(rating), date=date)
+        review = Review(course=course, description=description, reviewer=reviewer, rating=int(rating))
         review.save()
-        return redirect(request.POST.get("redirect_url"))
+
+    return redirect("course_details", id=id)

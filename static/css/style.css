@@ -185,6 +185,7 @@ a{
 
 .course-details__banner{
   display: flex;
+  min-height: 250px;
   flex-direction: column;
   align-items: center;
   justify-content: end;
@@ -213,29 +214,53 @@ a{
   font-size: 3rem;
 }
 
-.reviews-section{
-  margin: 0 10rem;
-  padding-top: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+
+
+
+
+
+.description-and-booking{
+  padding: 2rem;
+  margin: 1rem 10rem;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
+  /* background-color: lightcoral; */
 }
 
-
-
-
-
-
 .course-full-description{
-  margin: 0 2rem;
+  width: 25rem;
   text-align: center;
   font-style: italic;
 }
 
+.course-images{
+  /* background-color: lightblue; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.course-images__2-3{
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+}
 
+.course-description__image1{
+  height: 18rem;
+  margin: 0.1rem;
+}
+
+.course-description__image2{
+  height: 9rem;
+  margin: 0.1rem;
+}
+
+.course-description__image3{
+  height: 9rem;
+  margin: 0.1rem;
+}
 
 
 
@@ -260,6 +285,16 @@ a{
   cursor: pointer;
   background-color: orangered;
   transition: 0.25s;
+}
+
+.reviews-section{
+  margin: 0 10rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .subheading{
@@ -599,18 +634,21 @@ a{
 }
 
 .review-form{
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.65);
   display: flex;
   justify-content: center;
-  margin: 4rem 40rem;
-  height: 35rem;
-  border: 2px solid white;
+  margin: 6rem 40rem;
+  height: 30rem;
+  /* border: 2px solid white; */
+  border-radius: 2rem;
   padding: 2rem 0 0 0;
+  min-width: 400px;
 }
 
 .review-name{
-  color: white;
+  color: orange;
   margin-bottom: 0.5rem;
+  margin-top: 2rem;
 }
 
 .review-description{
@@ -623,6 +661,9 @@ a{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
 #review-svg{
@@ -633,13 +674,17 @@ a{
 .review-description__input{
   width: 20rem;
   padding: 0.5rem 1rem;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.75);
   color: white;
   border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 2px solid white;;
-  margin: 1rem;
+  /* border-left: none;
+  border-right: none; */
+  border: none;
+  /* border: 2px solid white; */
+  border-radius: 1rem;
+  margin: 0.1rem 1rem 1rem 1rem;
+  max-width: 35rem;
+  max-height: 12.5rem;
 }
 
 .review-score{
@@ -647,6 +692,13 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.review__select-rating{
+  color: orange;
+  padding: 0.25rem 0.6rem;
+  background: rgba(0, 0, 0, 0.75);
+  border: none;
 }
 
 .review-submit{
@@ -658,7 +710,7 @@ a{
 .review-submit-button{
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin-top: 2rem;
-  background-color: orange;
+  background-color: rgba(255, 255, 255, 0.75);
   color: black;
   font-weight: bold;
   width: 10rem;

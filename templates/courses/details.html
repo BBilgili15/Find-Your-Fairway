@@ -20,10 +20,17 @@
   <button id="add-to-button" class="played-button">ADD TO PLAYED COURSES</button>
   <a href="{% url 'leave_review' course.id %}"><button id="add-to-button" class="leave-review-button">LEAVE A REVIEW</button></a>
 </div>
-      
-      
-      <!-- <h4 class="course-full-description">"{{ course.description }}"</h4> -->
-      
+
+<div class="description-and-booking">
+  <h4 class="course-full-description">"{{ course.description }}"</h4>
+  <div class="course-images">
+    <img src="/static/images/pexels-kaique-rocha-105253.jpg" class="course-description__image1">
+    <div class="course-images__2-3">
+      <img src="/static/images/pexels-branislav-bednár-5716652.jpg" class="course-description__image2">
+      <img src="/static/images/pexels-matt-barnard-6871278.jpg" class="course-description__image3">
+    </div>
+  </div>  
+</div>    
       
       <section class="course-content">
         <!-- COURSE STATS -->
